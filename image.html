@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemrosesan Gambar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Resize Gambar</h1>
+    </header>
+
+    <main>
+      <section id="image-form">
+        <h2>Resize Gambar</h2>
+
+        <input type="file" id="image-file" accept="image/*" />
+        <label for="image-width">Lebar (pixels):</label>
+        <input type="number" id="image-width" min="1" value="300" />
+        <label for="image-height">Tinggi (pixels):</label>
+        <input type="number" id="image-height" min="1" value="200" />
+        <button id="resize-image-button">Resize Gambar</button>
+
+        <div id="image-preview" style="display: none">
+          <img id="preview-image" />
+          <p>Lebar: <span id="preview-width"></span></p>
+          <p>Tinggi: <span id="preview-height"></span></p>
+        </div>
+
+        <div id="image-download" style="display: none">
+          <a href="" id="image-download-link">Unduh Gambar</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Web PicSound</p>
+    </footer>
+
+    <script src="image_script.js"></script>
+  </body>
+</html>
