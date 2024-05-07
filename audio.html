@@ -3,32 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kompres Audio</title>
+    <title>Audio Compressor</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Kompres Audio</h1>
+    <div class="container">
+      <h1>Audio Compressor</h1>
+      <div class="audio-input">
+        <label for="audio-file">Pilih File Audio</label>
+        <input type="file" id="audio-file" accept="audio/*" />
+      </div>
 
-    <p>Pilih file audio yang ingin Anda kompres:</p>
-    <input type="file" id="audioFile" accept="audio/*" />
-
-    <p>Kualitas kompresi:</p>
-    <select id="quality">
-      <option value="low">Rendah</option>
-      <option value="medium">Sedang</option>
-      <option value="high">Tinggi</option>
-    </select>
-
-    <button onclick="compressAudio()">Kompres Audio</button>
-
-    <div id="progress">
-      <p>Progress: 0%</p>
-      <div id="progressBar"></div>
-    </div>
-
-    <div id="result">
-      <p>Audio yang dikompresi:</p>
-      <a id="downloadLink" href="#">Download</a>
+      <div class="target-size">
+        <label for="target-size">Masukkan target size(MB)</label>
+        <input type="number" id="target-size" min="0" />
+      </div>
+      <div class="buttons">
+        <button id="compress-button">Kompres</button>
+      </div>
     </div>
 
     <script src="audio_script.js"></script>
